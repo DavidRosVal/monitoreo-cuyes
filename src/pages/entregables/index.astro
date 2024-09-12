@@ -6,6 +6,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
 import { getCollection } from 'astro:content';
 import FormattedDate from '../../components/FormattedDate.astro';
 
+const modeloCanvasUrl = "/modelo-canvas.pdf"
 const actaDeConstitucionUrl = "/acta-de-constitucion.pdf"
 
 ---
@@ -18,7 +19,17 @@ const actaDeConstitucionUrl = "/acta-de-constitucion.pdf"
 			main {
 				width: 960px;
 			}
-			
+			.seccion {
+        margin-bottom: 3em;
+      }
+      h3 {
+        text-align: center;
+      }
+      li h2 {
+        font-weight: normal;
+        font-size: x-large;
+        margin-bottom: 1em;
+      }
 		</style>
 	</head>
 	<body>
@@ -27,13 +38,30 @@ const actaDeConstitucionUrl = "/acta-de-constitucion.pdf"
       <h1>Entregables</h1>
 			<ol>
         <li>
-          <p>Desarrollar el acta de constitución</p>
-          <h3>Entradas</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias debitis fugiat numquam mollitia, velit vero placeat quasi quibusdam quam ipsum adipisci excepturi sequi maxime impedit nemo repellendus tempora ullam molestiae.</p>
-          <h3>Herramientas</h3>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto cupiditate minus amet a laboriosam qui natus! Quis repellendus voluptatum quaerat, culpa ullam libero dignissimos! Optio quod iure soluta nisi ea?</p>
-          <h3>Acta de constitución</h3>
-          <iframe src={actaDeConstitucionUrl} width="100%" height="600px"></iframe>
+          <h2>Desarrollar el acta de constitución</h2>
+          <div class="seccion">
+            <h3>Entradas</h3>
+            <h4>Caso del negocio</h4>
+            <p>El proyecto busca resolver el desafío de gestionar de manera eficiente las condiciones ambientales en un criadero de cuyes, ubicado en un clima subtropical árido. Actualmente, el criadero enfrenta dificultades para mantener condiciones óptimas de temperatura y humedad, lo que puede impactar la salud y productividad de los cuyes, aumentando los costos operativos. La implementación de un sistema IoT permitirá la automatización de estos procesos, optimizando los recursos y mejorando la rentabilidad del criadero. Además, ayudará a cumplir con normativas y posicionar al criadero como líder en innovación en su sector​.</p>
+            <h4>Visión</h4>
+            <p>Convertirse en el criadero de cuyes más avanzado tecnológicamente en la región, liderando la innovación y eficiencia a través del uso de tecnologías de Internet de las Cosas (IoT), para optimizar la gestión ambiental y el bienestar de los animales.
+            </p>
+            <h4>Misión</h4>
+            <p>Implementar un sistema de gestión basado en IoT que permita monitorear y controlar en tiempo real las condiciones ambientales del criadero de cuyes, mejorando su productividad, reduciendo costos operativos, y garantizando el bienestar de los animales, al mismo tiempo que se asegura el cumplimiento de normativas y mejores prácticas en la industria​.</p>
+          </div>
+          <div class="seccion">
+            <h3>Herramientas</h3>
+            <h4>Modelo Canvas</h4>
+            <p>El Business Model Canvas (lienzo de modelo de negocio) sirve como una herramienta estratégica para analizar, diseñar y comunicar modelos de negocio de forma visual y simplificada. Proporciona una estructura clara y concisa para comprender los diferentes aspectos que conforman un modelo de negocio y cómo interactúan entre sí.</p>
+            <iframe src={modeloCanvasUrl} width="100%" height="600px"></iframe>
+          </div>
+          <div class="seccion">
+            <h3>Salida</h3>
+            <h4>Acta de constitución</h4>
+            <p>El Acta de Constitución de un proyecto es un documento fundamental en la gestión de proyectos que se utiliza para autorizar oficialmente el inicio de un proyecto. El acta de constitución establece la base y la autoridad para el proyecto y proporciona una visión general de alto nivel de lo que se espera lograr en el proyecto</p>
+            <iframe src={actaDeConstitucionUrl} width="100%" height="600px"></iframe>
+          </div>
+          
         </li>
       </ol>
 		</main>
