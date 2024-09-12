@@ -1,0 +1,42 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
+import { getCollection } from 'astro:content';
+import FormattedDate from '../../components/FormattedDate.astro';
+
+const actaDeConstitucionUrl = "/acta-de-constitucion.pdf"
+
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<style>
+			main {
+				width: 960px;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<Header />
+		<main>
+      <h1>Entregables</h1>
+			<ol>
+        <li>
+          <p>Desarrollar el acta de constitución</p>
+          <h3>Entradas</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias debitis fugiat numquam mollitia, velit vero placeat quasi quibusdam quam ipsum adipisci excepturi sequi maxime impedit nemo repellendus tempora ullam molestiae.</p>
+          <h3>Herramientas</h3>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto cupiditate minus amet a laboriosam qui natus! Quis repellendus voluptatum quaerat, culpa ullam libero dignissimos! Optio quod iure soluta nisi ea?</p>
+          <h3>Acta de constitución</h3>
+          <iframe src={actaDeConstitucionUrl} width="100%" height="600px"></iframe>
+        </li>
+      </ol>
+		</main>
+		<Footer />
+	</body>
+</html>
