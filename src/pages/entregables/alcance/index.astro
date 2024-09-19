@@ -1,0 +1,95 @@
+---
+import BaseHead from '../../../components/BaseHead.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../../../consts';
+
+const modeloCanvasUrl = "/modelo-canvas.pdf"
+const actaDeConstitucionUrl = "/acta-de-constitucion.pdf"
+const diagramaFlujoUrl = "/diagrama-de-flujo-cuidado.jpg"
+const cuidador1 = "/cuidador1.jpg"
+const cuidador2 = "/cuidador2.jpg"
+const edt = "/EDT.pdf"
+const diccionarioEdt = "/diccionario-EDT.pdf"
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<style>
+			main {
+				width: 960px;
+			}
+			.seccion {
+        margin-bottom: 3em;
+      }
+      h3, h2 {
+        text-align: center;
+        margin-bottom: 0.5em;
+        margin-top: 0.5em;
+      }
+      h3 {
+        margin-top: 1em;
+      }
+      h1 {
+        text-align: center;
+        margin-bottom: 1em;
+      }
+      .personal-container {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 2em;
+      }
+      .personal {
+        width: 500px;
+        text-align: center;
+        padding: 0 1em 0 1em;
+      }
+		</style>
+	</head>
+	<body>
+		<Header />
+		<main>
+      <h1>Alcance</h1>
+      <div class="seccion">
+        <hr>
+        <h2>Entradas</h2>
+        <hr>
+        <ol>
+          <li>
+            <a href="/entregables/factores-ambientales">Factores ambientales de la Empresa</a>
+          </li>
+          <li>
+            <a href="/entregables/activos-de-los-procesos">Activos de los Procesos de la Organización</a>
+          </li>
+        </ol>
+        <hr>
+        <h2>Herramientas</h2>
+        <hr>
+        <h3>Descomposición</h3>
+        <h4>CRISP-DM</h4>
+        <p>Además de la etapa de Planificación, se identificaron las etapas del desarrollo e implementación del proyecto. Las cuales incluyen la creación del modelo de Machine Learning, desde la recolección y normalización de datos, entrenamiento y selección del modelo, hasta la aplicación de métricas para optimizar su precisión. Esa división de etapas en el desarrollo del modelo de ML se obtuvo gracias a la investigación sobre la metodología CRISP-DM (Cross-Industry Standard Process for Data Mining).</p>
+        <h4>Lean</h4>
+        <p>Por otro lado, para la implementación e instalación de componentes IoT, se optó por la metodología Lean, ya que optimiza el uso de recursos, minimiza el desperdicio (tiempo, materiales y movimientos innecesarios) y mejora continuamente los procesos; lo cual permite que la instalación sea más rápida, eficiente y rentable, asegurando que solo se realicen actividades que aporten valor directo al proyecto.</p>
+        <h4>Scrum</h4>
+        <p>Para el desarrollo de la plataforma móvil se optó por una metodología Scrum. cada módulo de la app representaría un Sprint para ser desarrollado.</p>
+        <h4>DevOps</h4>
+        <p>Por último, la metodología DevOps ayudaría a integrar la automatización en la integración y despliegue de los servidores web y de Machine Learning, así como en la actualización del firmware del ESP32. Utiliza integración continua (CI) para incorporar cambios rápidamente, despliegue continuo (CD) para mantener actualizados los servidores y el firmware, monitoreo para vigilar el rendimiento del sistema y la calidad de los datos de video y sensores, y automatización para gestionar la infraestructura y el procesamiento de datos MQTT de manera eficiente. Esto garantiza que todo el sistema funcione de forma fluida y siempre esté al día.</p>
+        <hr>
+        <h2>Salidas</h2>
+        <hr>
+        <h3>Enunciado del alcance</h3>
+        <p>Este proyecto tiene como objetivo diseñar, desarrollar e implementar un sistema IoT para monitorear y controlar un criadero de cuyes. El sistema incluirá tanto hardware como software, con módulos de comunicación (Wi-Fi, Bluetooth), sensores y cámaras para recopilar datos en tiempo real sobre los parámetros ambientales y el comportamiento de los cuyes. Además, se desarrollará un modelo de aprendizaje automático (ML) para identificar y contar cuyes, así como detectar comportamientos inusuales o signos de enfermedad. El proyecto también incluirá la instalación del sistema en el criadero, capacitación al personal, y validación inicial y final del sistema. Por último, se generarán métricas y reportes automatizados para el ajuste de condiciones ambientales y alertas.</p>
+        <h3>Estructura de Desglose de Trabajo EDT</h3>
+        <iframe src={edt} width="100%" height="600px"></iframe>
+        <h3>Diccionario EDT</h3>
+        <iframe src={diccionarioEdt} width="100%" height="600px"></iframe>
+
+        
+      </div>
+      
+		</main>
+		<Footer />
+	</body>
+</html>

@@ -1,0 +1,114 @@
+---
+import BaseHead from '../../../components/BaseHead.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../../../consts';
+
+const modeloCanvasUrl = "/modelo-canvas.pdf"
+const actaDeConstitucionUrl = "/acta-de-constitucion.pdf"
+const diagramaFlujoUrl = "/diagrama-de-flujo-cuidado.jpg"
+const cuidador1 = "/cuidador1.jpg"
+const cuidador2 = "/cuidador2.jpg"
+
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<style>
+			main {
+				width: 960px;
+			}
+			.seccion {
+        margin-bottom: 3em;
+      }
+      h3, h2 {
+        text-align: center;
+        margin-bottom: 0.5em;
+        margin-top: 0.5em;
+      }
+      h3 {
+        margin-top: 1em;
+      }
+      h1 {
+        text-align: center;
+        margin-bottom: 1em;
+      }
+      .personal-container {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 2em;
+      }
+      .personal {
+        width: 500px;
+        text-align: center;
+        padding: 0 1em 0 1em;
+      }
+		</style>
+	</head>
+	<body>
+		<Header />
+		<main>
+      <h1>Activos de los Procesos de la Organización</h1>
+      <div class="seccion">
+        <hr>
+        <h2>Documentación Organizacional</h2>
+        <hr>
+        <h3>Diagrama de Flujo del Proceso de Cuidado de Cuyes</h3>
+        <p>Documento que detalla los procedimientos operativos estándar del criadero, incluyendo la alimentación, el cuidado y la gestión de los cuyes. Durante la visita al criadero, se creó el diagrama en colaboración con la dueña, que no contaban con uno realizado formalmente.</p>
+        <img width={1220} height={1518} src={diagramaFlujoUrl} alt="" />
+        
+        <hr>
+        <h2>Recursos Humanos</h2>
+        <hr>
+        <h3>Personal y experiencia en manejo de cuyes</h3>
+        <div class="personal-container">
+          <div class="personal">
+            <h4>María Justina Melo Evangelista</h4>
+            <img width={200} height={200} src={cuidador1} alt="" />
+            <p>Dueña y cuidadora del establecimiento de crianza de cuyes</p>
+          </div>  
+          <div class="personal">
+            <h4>Andrés Armando Aquino Meló</h4>
+            <img width={200} height={200} src={cuidador1} alt="" />
+            <p>Cuidador asistente</p>
+          </div>  
+          <div class="personal">
+            <h4>Adrian Eduardo Arenas Quispe</h4>
+            <img width={200} height={200} src={cuidador1} alt="" />
+            <p>Cuidador asistente</p>
+          </div>  
+        </div>
+        
+        <hr>
+        <h2>Infraestructura Física y Tecnológica</h2>
+        <hr>
+        <h3>Instalaciones del Criadero</h3>
+        <p>Durante la visita al criadero, se revisaron las características físicas de las instalaciones para evaluar la viabilidad de la instalación de equipos de monitoreo.</p>
+        <img width={1220}  src={"/instalaciones-galpones.jpg"} alt="" />
+        <h4>Distribución de Galpones</h4>
+        <p>Los galpones estan construidos con ladrillo y cemento y distribuidos uno junto a otro</p>
+        <img width={1220}  src={"/instalaciones-galpon.jpg"} alt="" />
+        <h4>Dimensiones</h4>
+        <p>Las dimensiones de cada galpón es 0.95 x 1.30 x 2.30 metros.
+        </p>
+        <h3>Equipos y Herramientas Actuales</h3>
+        <p>Esta información se obtuvo durante la visita</p>
+        <img width={1220}  src={"/herramientas.jpg"} alt="" />
+        <p>Se observa que se utiliza un sistema de alimentación e hidratación fabricado manualmente para cada galpón </p>
+      </div>
+      <div class="seccion">
+        <hr>
+        <h2>Herramientas</h2>
+        <hr>
+        <h3>Visita al criadero</h3>
+        <p>Se realizaron entrevistas y toma de fotos y videos al establecimiento para obtener los Activos</p>
+        <img width={1020} height={510} src={"/entrevista-visita.jpg"} alt="" />
+        
+      </div>
+      
+		</main>
+		<Footer />
+	</body>
+</html>

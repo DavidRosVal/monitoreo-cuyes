@@ -1,0 +1,102 @@
+---
+import BaseHead from '../../../components/BaseHead.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../../../consts';
+
+const modeloCanvasUrl = "/modelo-canvas.pdf"
+const actaDeConstitucionUrl = "/acta-de-constitucion.pdf"
+
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<style>
+			main {
+				width: 960px;
+			}
+			.seccion {
+        margin-bottom: 3em;
+      }
+      h3, h2 {
+        text-align: center;
+        margin-bottom: 0.5em;
+        margin-top: 0.5em;
+      }
+      h3 {
+        margin-top: 1em;
+      }
+      h1 {
+        text-align: center;
+        margin-bottom: 1em;
+      }
+      .personal-container {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 2em;
+      }
+      .personal {
+        width: 500px;
+        text-align: center;
+        padding: 0 1em 0 1em;
+      }
+		</style>
+	</head>
+	<body>
+		<Header />
+		<main>
+      <h1>Acta de Constitución</h1>
+      <div class="seccion">
+        <hr>
+        <h2>Entradas</h2>
+        <hr>
+        <h3>Documentos del negocio</h3>
+        <h4>Caso del negocio</h4>
+        <p>El proyecto busca resolver el desafío de gestionar de manera eficiente las condiciones ambientales en Criadero de Cuyes Melo. Actualmente, el criadero enfrenta dificultades para mantener condiciones óptimas de temperatura y humedad, lo que puede impactar la salud y productividad de los cuyes, aumentando los costos operativos. La implementación de un sistema IoT permitirá la automatización de estos procesos, optimizando los recursos y mejorando la rentabilidad del criadero. Además, ayudará a cumplir con normativas y posicionar al criadero como líder en innovación en su sector​.</p>
+        <h4>Visión</h4>
+        <p>Convertirse en el criadero de cuyes más avanzado tecnológicamente en la región, liderando la innovación y eficiencia a través del uso de tecnologías de Internet de las Cosas (IoT), para optimizar la gestión ambiental y el bienestar de los animales.
+        </p>
+        <h4>Misión</h4>
+        <p>Implementar un sistema de gestión basado en IoT, que permita monitorear y controlar en tiempo real las condiciones ambientales del criadero de cuyes; y Machine Learning, que monitoree e identifique los comportamientos de los cuyes; con el fin de mejorar la productividad del criadero, reduciendo costos operativos, y garantizando el bienestar de los animales, al mismo tiempo que se asegura el cumplimiento de normativas y mejores prácticas en la industria​.</p>
+        <h4>Registro General de Cuyes e Inventario de distribución y galón de cuyes</h4>
+        <iframe src={"/documentos-acta.pdf"} width="100%" height="600px"></iframe>
+        <h4>Otras entradas</h4>
+        <ol>
+          <li>
+            <a href="/entregables/factores-ambientales">Factores ambientales de la Empresa</a>
+          </li>
+          <li>
+            <a href="/entregables/activos-de-los-procesos">Activos de los Procesos de la Organización</a>
+          </li>
+        </ol>
+
+      </div>
+      <div class="seccion">
+        <hr>
+        <h2>Herramientas</h2>
+        <hr>
+        <h3>Entrevistas</h3>
+        <p>En la primera visita al criadero logramos obtener la información necesaria para desarrollar el acta</p>
+        <img width={1000} src={"/entrevista-visita.jpg"} alt="" />
+        <h3>Reuniones</h3>
+        <p>Para la redacción tuvimos reuniones para repartirnos el trabajo, compartir avances y mantener coherencia</p>
+        <img width={1000} src={"/evidencia-acta.jpg"} alt="" />
+
+        <h3>Modelo Canvas</h3>
+        <p>El Business Model Canvas (lienzo de modelo de negocio) sirve como una herramienta estratégica para analizar, diseñar y comunicar modelos de negocio de forma visual y simplificada. Proporciona una estructura clara y concisa para comprender los diferentes aspectos que conforman un modelo de negocio y cómo interactúan entre sí.</p>
+        <iframe src={modeloCanvasUrl} width="100%" height="600px"></iframe>
+      </div>
+      <div class="seccion">
+        <hr>
+        <h2>Salida</h2>
+        <hr>
+        <h3>Acta de constitución</h3>
+        <p>El Acta de Constitución de un proyecto es un documento fundamental en la gestión de proyectos que se utiliza para autorizar oficialmente el inicio de un proyecto. El acta de constitución establece la base y la autoridad para el proyecto y proporciona una visión general de alto nivel de lo que se espera lograr en el proyecto</p>
+        <iframe src={actaDeConstitucionUrl} width="100%" height="600px"></iframe>
+      </div>
+		</main>
+		<Footer />
+	</body>
+</html>

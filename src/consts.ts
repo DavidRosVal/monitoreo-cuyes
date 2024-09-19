@@ -3,3 +3,24 @@
 
 export const SITE_TITLE = 'Gestión de procesos TI';
 export const SITE_DESCRIPTION = 'Presentación de avance de proyecto de monitoreo de cuyes';
+
+export const CONTENT = {
+  actaDeConstitucion: {
+
+  },
+  factoresAmbientales: {
+
+  },
+  activosDeLosProcesos: {
+
+  },
+  acuerdos: {
+
+  },
+  requisitos: {
+
+  },
+  alcance: {
+
+  },
+}

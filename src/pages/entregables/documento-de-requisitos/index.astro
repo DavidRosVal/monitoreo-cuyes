@@ -1,0 +1,125 @@
+---
+import BaseHead from '../../../components/BaseHead.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../../../consts';
+
+const modeloCanvasUrl = "/modelo-canvas.pdf"
+const actaDeConstitucionUrl = "/acta-de-constitucion.pdf"
+const diagramaFlujoUrl = "/diagrama-de-flujo-cuidado.jpg"
+const cuidador1 = "/cuidador1.jpg"
+const cuidador2 = "/cuidador2.jpg"
+const edt = "/EDT.pdf"
+const diccionarioEdt = "/diccionario-EDT.pdf"
+const documentacionRequisitos = "/documentacion-requisitos.pdf"
+const matrizTrazabilidad = "/matriz-trazabilidad.pdf"
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<style>
+			main {
+				width: 960px;
+			}
+			.seccion {
+        margin-bottom: 3em;
+      }
+      h3, h2 {
+        text-align: center;
+        margin-bottom: 0.5em;
+        margin-top: 0.5em;
+      }
+      h3 {
+        margin-top: 1em;
+      }
+      h1 {
+        text-align: center;
+        margin-bottom: 1em;
+      }
+      .personal-container {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 2em;
+      }
+      .personal {
+        width: 500px;
+        text-align: center;
+        padding: 0 1em 0 1em;
+      }
+		</style>
+	</head>
+	<body>
+		<Header />
+		<main>
+      <h1>Documento de Requisitos</h1>
+      <div class="seccion">
+        <hr>
+        <h2>Entradas</h2>
+        <hr>
+        <ol>
+          <li>
+            <a href="/entregables/acta-de-constitucion">Acta de Constitución del Proyecto</a>
+          </li>
+          <li>
+            <a href="/entregables/factores-ambientales">Factores ambientales de la Empresa</a>
+          </li>
+          <li>
+            <a href="/entregables/activos-de-los-procesos">Activos de los Procesos de la Organización</a>
+          </li>
+          <li>
+            <p>Registro de interesados</p>
+            <p>Trabajadores del negocio "Criadero de Cuyes Melo":</p>
+            <ol>
+              <li>
+                María Justina Melo Evangelista
+              </li>
+              <li>
+                Andrés Armando Aquino Meló
+              </li>
+              <li>
+                Adrian Eduardo Arenas Quispe
+              </li>
+            </ol>
+            <p>Integrantes de la gestión y desarrollo del proyecto:</p>
+            <ol>
+              <li>
+                Kori Timana
+              </li>
+              <li>
+                Omar Ccencho
+              </li>
+              <li>
+                Omar Vargas
+              </li>
+              <li>
+                Wilber Melendez
+              </li>
+              <li>
+                Juan Pablo Rosado
+              </li>
+            </ol>
+          </li>
+        </ol>
+        <hr>
+        <h2>Herramientas</h2>
+        <hr>
+        <h3>Recopilación datos</h3>
+        <p>Mediante <strong>lluvia de ideas</strong> y la formación de <strong>grupos focales</strong> discutimos los requerimientos necesarios para el proyecto, que incluyan las funcionalidades del sistema, dispositivos a utilizar y tecnologías, además de el espacio brindado por el negocio de crianza de cuyes</p>
+        <img width={1020} height={510} src="/evidencia-requisitos.jpg" alt="" />
+        <hr>
+        <h2>Salidas</h2>
+        <hr>
+        <h3>Documentación de requisitos</h3>
+        <iframe src={documentacionRequisitos} width="100%" height="600px"></iframe>
+        <h3>Matriz de trazabilidad de requisitos</h3>
+        <iframe src={matrizTrazabilidad} width="100%" height="600px"></iframe>
+
+        
+      </div>
+      
+		</main>
+		<Footer />
+	</body>
+</html>
