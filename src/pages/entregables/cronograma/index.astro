@@ -1,8 +1,8 @@
 ---
-import BaseHead from '../../components/BaseHead.astro';
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
+import BaseHead from '../../../components/BaseHead.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../../../consts';
 
 const modeloCanvasUrl = "/modelo-canvas.pdf"
 const actaDeConstitucionUrl = "/acta-de-constitucion.pdf"
@@ -54,29 +54,24 @@ const actaDeConstitucionUrl = "/acta-de-constitucion.pdf"
 	<body>
 		<Header />
 		<main>
-      <h1>Avance</h1>
+      <h1>Cronograma</h1>
 			<ol>
         <li>
-          <a href="/entregables/factores-ambientales">Factores ambientales de la Empresa</a>
+          <a href="/entregables/cronograma/plan-de-gestion-del-cronograma">Planificar la Gestión del Cronograma</a>
         </li>
         <li>
-          <a href="/entregables/activos-de-los-procesos">Activos de los Procesos de la Organización</a>
+          <a href="/entregables/cronograma/definir-las-actividades">Definir las Actividades</a>
         </li>
         <li>
-          <a href="/entregables/acta-de-constitucion">Acta de Constitución</a>
+          <a href="/entregables/cronograma/secuenciar-las-actividades">Secuenciar las Actividades</a>
         </li>
         <li>
-          <a href="/entregables/documento-de-requisitos">Documento de Requisitos</a>
+          <a href="/entregables/cronograma/estimar-la-duracion">Estimar la Duración de las Actividades</a>
         </li>
         <li>
-          <a href="/entregables/alcance">Alcance</a>
+          <a href="/entregables/cronograma/desarrollar-el-cronograma">Desarrollar el Cronograma</a>
         </li>
-        <li>
-          <a href="/entregables/cronograma">Cronograma</a>
-        </li>
-        <li>
-          <a href="/entregables/costos">Costos</a>
-        </li>
+        
       </ol>
 		</main>
 		<Footer />

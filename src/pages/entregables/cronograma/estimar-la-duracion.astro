@@ -1,0 +1,94 @@
+---
+import BaseHead from '../../../components/BaseHead.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../../../consts';
+
+const modeloCanvasUrl = "/modelo-canvas.pdf"
+const actaDeConstitucionUrl = "/acta-de-constitucion.pdf"
+const diagramaFlujoUrl = "/diagrama-de-flujo-cuidado.jpg"
+const cuidador1 = "/cuidador1.jpg"
+const cuidador2 = "/cuidador2.jpg"
+const edt = "/EDT.pdf"
+const diccionarioEdt = "/diccionario-EDT.pdf"
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<style>
+			main {
+				width: 960px;
+			}
+			.seccion {
+        margin-bottom: 3em;
+      }
+      h3, h2 {
+        text-align: center;
+        margin-bottom: 0.5em;
+        margin-top: 0.5em;
+      }
+      h3 {
+        margin-top: 1em;
+      }
+      h1 {
+        text-align: center;
+        margin-bottom: 1em;
+      }
+      .personal-container {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 2em;
+      }
+      .personal {
+        width: 500px;
+        text-align: center;
+        padding: 0 1em 0 1em;
+      }
+		</style>
+	</head>
+	<body>
+		<Header />
+		<main>
+      <h1>Estimar la Duración de las Actividades</h1>
+      <div class="seccion">
+        <hr>
+        <h2>Entradas</h2>
+        <hr>
+        <ol>
+          <li>
+            <a href="/entregables/factores-ambientales">Factores ambientales de la Empresa</a>
+          </li>
+        </ol>
+        <hr>
+        <h2>Herramientas</h2>
+        <hr>
+        <h3>Estimación por tres valores
+
+        </h3>
+        <p>
+          La exactitud de las estimaciones de la duración por un único valor puede mejorarse si se tienen en cuenta la incertidumbre y el riesgo. El uso de estimaciones basadas en tres valores ayuda a definir un rango aproximado de duración de una actividad:
+        </p>
+        <ul>
+          <li>
+            <strong>Más probable (Tm):</strong> Esta estimación se basa en la duración de la actividad, en función de los recursos que probablemente le sean asignados, de su productividad, de las expectativas realistas de disponibilidad para la actividad, de las dependencias de otros participantes y de las interrupciones.
+          </li>
+          <li>
+            <strong>Optimista (To):</strong> Estima la duración de la actividad sobre la base del análisis del mejor escenario para esa actividad.
+          </li>
+          <li>
+            <strong>Pesimista (Tp):</strong> Estima la duración sobre la base del análisis del peor escenario para esa actividad.
+          </li>
+        <h2>Salidas</h2>
+        <hr>
+        
+        <h3>Estimación de la duración</h3>
+        <iframe src={"/estimacion-de-la-duracion.pdf"} width="100%" height="600px"></iframe>
+        
+      </div>
+      
+		</main>
+		<Footer />
+	</body>
+</html>

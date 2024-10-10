@@ -6,7 +6,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../../../consts';
 
 const modeloCanvasUrl = "/modelo-canvas.pdf"
 const actaDeConstitucionUrl = "/acta-de-constitucion.pdf"
-const diagramaFlujoUrl = "/diagrama-de-flujo-cuidado.jpg"
+const diagramaFlujoUrl = "/diagrama-flujo-envasado.png"
 const cuidador1 = "/cuidador1.jpg"
 const cuidador2 = "/cuidador2.jpg"
 
@@ -38,12 +38,14 @@ const cuidador2 = "/cuidador2.jpg"
       .personal-container {
         display: flex;
         justify-content: space-between;
-        margin-top: 2em;
+        margin-top: 3em;
+        flex-wrap: wrap;
       }
       .personal {
-        width: 500px;
+        width: 300px;
         text-align: center;
         padding: 0 1em 0 1em;
+        margin-top: 1em;
       }
 		</style>
 	</head>
@@ -55,8 +57,8 @@ const cuidador2 = "/cuidador2.jpg"
         <hr>
         <h2>Documentación Organizacional</h2>
         <hr>
-        <h3>Diagrama de Flujo del Proceso de Cuidado de Cuyes</h3>
-        <p>Documento que detalla los procedimientos operativos estándar del criadero, incluyendo la alimentación, el cuidado y la gestión de los cuyes. Durante la visita al criadero, se creó el diagrama en colaboración con la dueña, que no contaban con uno realizado formalmente.</p>
+        <h3>Diagrama de Flujo del Proceso Actual de Envasado</h3>
+        <p>Se ha creado un diagrama de flujo que detalla los procedimientos operativos estándar para el proceso de envasado del veneno para ratas en Biota Lab. Este documento incluye pasos esenciales como la preparación del producto, el control de calidad y el empaquetado. Durante una revisión de los procesos existentes, se desarrolló este diagrama en colaboración con el equipo de producción, ya que anteriormente no contaban con una representación formal del flujo de trabajo.</p>
         <img width={1220} height={1518} src={diagramaFlujoUrl} alt="" />
         
         <hr>
@@ -65,46 +67,78 @@ const cuidador2 = "/cuidador2.jpg"
         <h3>Personal y experiencia en manejo de cuyes</h3>
         <div class="personal-container">
           <div class="personal">
-            <h4>María Justina Melo Evangelista</h4>
+            <h4>Denis Larramendi Griñán</h4>
             <img width={200} height={200} src={cuidador1} alt="" />
-            <p>Dueña y cuidadora del establecimiento de crianza de cuyes</p>
+            <p>Representante legal y responsable de la gestión legal y regulatoria de BiotaLab</p>
           </div>  
           <div class="personal">
-            <h4>Andrés Armando Aquino Meló</h4>
+            <h4>Carlos Jiménez</h4>
             <img width={200} height={200} src={cuidador1} alt="" />
-            <p>Cuidador asistente</p>
+            <p>Encargado de supervisar el proceso de control de calidad en la producción</p>
           </div>  
           <div class="personal">
-            <h4>Adrian Eduardo Arenas Quispe</h4>
+            <h4>Sofía Torres</h4>
             <img width={200} height={200} src={cuidador1} alt="" />
-            <p>Cuidador asistente</p>
+            <p>Responsable de la coordinación y supervisión del proceso de envasado</p>
           </div>  
+          <div class="personal">
+            <h4>Javier Ramírez</h4>
+            <img width={200} height={200} src={cuidador1} alt="" />
+            <p>Encargado del mantenimiento y reparación de los equipos utilizados en el proceso de producción y envasado
+            </p>
+          </div>  
+          <div class="personal">
+            <h4>María González</h4>
+            <img width={200} height={200} src={cuidador1} alt="" />
+            <p>Operaria de envasado, encargada de operar las máquinas de llenado y sellado de las bolsas</p>
+          </div>  
+          <div class="personal">
+            <h4>Raúl Pérez</h4>
+            <img width={200} height={200} src={cuidador1} alt="" />
+            <p>Especialista en logística, encargada de la gestión de inventarios y coordinación de la distribución de productos
+            </p>
+          </div>  
+          <div class="personal">
+            <h4>Fernando Morales
+            </h4>
+            <img width={200} height={200} src={cuidador1} alt="" />
+            <p>Analista de datos, responsable del análisis de la información recopilada por el sistema de Machine Learning para optimizar el proceso de producción.
+            </p>
+          </div>  
+          <div class="personal">
+            <h4>Patricia Ortiz</h4>
+            <img width={200} height={200} src={cuidador1} alt="" />
+            <p>Supervisora de turno, encargada de la supervisión diaria del equipo operativo durante los turnos de producción.
+            </p>
+          </div>  
+          <div class="personal">
+            <h4>Luis Rojas</h4>
+            <img width={200} height={200} src={cuidador1} alt="" />
+            <p>Técnico de seguridad, responsable de asegurar que todas las operaciones cumplan con las normativas de seguridad industrial.
+            </p>
+          </div>  
+          
         </div>
         
         <hr>
         <h2>Infraestructura Física y Tecnológica</h2>
         <hr>
-        <h3>Instalaciones del Criadero</h3>
-        <p>Durante la visita al criadero, se revisaron las características físicas de las instalaciones para evaluar la viabilidad de la instalación de equipos de monitoreo.</p>
-        <img width={1220}  src={"/instalaciones-galpones.jpg"} alt="" />
-        <h4>Distribución de Pozas</h4>
-        <p>Las pozas estan construidos con ladrillo y cemento y distribuidos uno junto a otro</p>
-        <img width={1220}  src={"/instalaciones-galpon.jpg"} alt="" />
-        <h4>Dimensiones</h4>
-        <p>Las dimensiones de cada poza es 0.95 x 1.30 x 2.30 metros.
-        </p>
+        <h3>Instalaciones de Biota Lab</h3>
+        <p>Durante la evaluación inicial de las instalaciones de Biota Lab, se revisaron las características físicas para determinar la viabilidad de la instalación de equipos de monitoreo. Se asegurará que las áreas donde se realizarán los procesos de envasado cuenten con las condiciones necesarias para el correcto funcionamiento del sistema IoT.</p>
+        
         <h3>Equipos y Herramientas Actuales</h3>
-        <p>Esta información se obtuvo durante la visita</p>
-        <img width={1220}  src={"/herramientas.jpg"} alt="" />
-        <p>Se observa que se utiliza un sistema de alimentación e hidratación fabricado manualmente para cada poza </p>
+        <p>En la evaluación de las instalaciones, se identificaron los equipos y herramientas que actualmente se utilizan en el proceso de producción. Esto incluye sistemas manuales de envasado y control de calidad, los cuales se optimizarán mediante la implementación del nuevo sistema automatizado.
+        </p>
+        
       </div>
       <div class="seccion">
         <hr>
         <h2>Herramientas</h2>
         <hr>
-        <h3>Visita al criadero</h3>
-        <p>Se realizaron entrevistas y toma de fotos y videos al establecimiento para obtener los Activos</p>
-        <img width={1020} height={510} src={"/entrevista-visita.jpg"} alt="" />
+        <h3>Visitas y Evaluaciones en las Instalaciones
+        </h3>
+        <p>Se realizaron visitas a Biota Lab, donde se llevaron a cabo entrevistas con el personal y se tomaron fotos y videos del establecimiento. Esta información fue fundamental para obtener un entendimiento completo de los activos y procesos actuales, y para identificar áreas de mejora en la implementación del sistema IoT.
+        </p>
         
       </div>
       

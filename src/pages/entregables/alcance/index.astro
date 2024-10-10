@@ -69,24 +69,25 @@ const diccionarioEdt = "/diccionario-EDT.pdf"
         <hr>
         <h3>Descomposición</h3>
         <h4>CRISP-DM</h4>
-        <p>Además de la etapa de Planificación, se identificaron las etapas del desarrollo e implementación del proyecto. Las cuales incluyen la creación del modelo de Machine Learning, desde la recolección y normalización de datos, entrenamiento y selección del modelo, hasta la aplicación de métricas para optimizar su precisión. Esa división de etapas en el desarrollo del modelo de ML se obtuvo gracias a la investigación sobre la metodología CRISP-DM (Cross-Industry Standard Process for Data Mining).</p>
+        <p>La metodología CRISP-DM (Cross-Industry Standard Process for Data Mining) guiará el desarrollo del modelo de Machine Learning del proyecto. Esta metodología se enfoca en todas las etapas del ciclo de vida del análisis de datos, desde la recolección y normalización de datos hasta el entrenamiento, la selección y la evaluación del modelo. Esto asegura que el sistema no solo cumpla con los estándares de precisión, sino que también optimice el control de calidad del veneno para ratas en Biota Lab.</p>
         <h4>Lean</h4>
-        <p>Por otro lado, para la implementación e instalación de componentes IoT, se optó por la metodología Lean, ya que optimiza el uso de recursos, minimiza el desperdicio (tiempo, materiales y movimientos innecesarios) y mejora continuamente los procesos; lo cual permite que la instalación sea más rápida, eficiente y rentable, asegurando que solo se realicen actividades que aporten valor directo al proyecto.</p>
+        <p>Para la instalación de los componentes IoT, se adoptará la metodología Lean, que busca maximizar la eficiencia al minimizar el desperdicio en tiempo, materiales y movimientos innecesarios. Este enfoque permitirá que la implementación sea más rápida y rentable, asegurando que cada actividad realizada aporte valor directo al proyecto. Al aplicar principios Lean, se facilitará una mejora continua en el proceso de instalación.
+        </p>
         <h4>Scrum</h4>
-        <p>Para el desarrollo de la plataforma móvil se optó por una metodología Scrum. cada módulo de la app representaría un Sprint para ser desarrollado.</p>
+        <p>El desarrollo de la plataforma móvil se llevará a cabo utilizando la metodología Scrum. Cada módulo de la aplicación se estructurará como un Sprint, lo que fomentará una gestión ágil y colaborativa del proceso. Esto permitirá al equipo adaptarse rápidamente a cualquier cambio en los requisitos y asegurar que se entreguen resultados de alta calidad en intervalos cortos, mejorando así la satisfacción del usuario final.
+        </p>
         <h4>DevOps</h4>
-        <p>Por último, la metodología DevOps ayudaría a integrar la automatización en la integración y despliegue de los servidores web y de Machine Learning, así como en la actualización del firmware del ESP32. Utiliza integración continua (CI) para incorporar cambios rápidamente, despliegue continuo (CD) para mantener actualizados los servidores y el firmware, monitoreo para vigilar el rendimiento del sistema y la calidad de los datos de video y sensores, y automatización para gestionar la infraestructura y el procesamiento de datos MQTT de manera eficiente. Esto garantiza que todo el sistema funcione de forma fluida y siempre esté al día.</p>
+        <p>La metodología DevOps se implementará para integrar la automatización en la gestión de los servidores web y el sistema de Machine Learning, así como en la actualización del firmware del ESP32. Utilizando prácticas de integración continua (CI) y despliegue continuo (CD), se garantizará que el sistema se mantenga actualizado y funcione de manera eficiente. Además, se establecerán procesos de monitoreo para evaluar el rendimiento del sistema y la calidad de los datos, asegurando que todas las operaciones fluyan sin problemas.</p>
         <hr>
         <h2>Salidas</h2>
         <hr>
         <h3>Enunciado del alcance</h3>
-        <p>Este proyecto tiene como objetivo diseñar, desarrollar e implementar un sistema IoT para monitorear y controlar un criadero de cuyes. El sistema incluirá tanto hardware como software, con módulos de comunicación (Wi-Fi, Bluetooth), sensores y cámaras para recopilar datos en tiempo real sobre los parámetros ambientales y el comportamiento de los cuyes. Además, se desarrollará un modelo de aprendizaje automático (ML) para identificar y contar cuyes, así como detectar comportamientos inusuales o signos de enfermedad. El proyecto también incluirá la instalación del sistema en el criadero, capacitación al personal, y validación inicial y final del sistema. Por último, se generarán métricas y reportes automatizados para el ajuste de condiciones ambientales y alertas.</p>
+        <p>Este proyecto tiene como objetivo diseñar, desarrollar e implementar un sistema IoT para monitorear y controlar el proceso de envasado de veneno para ratas en Biota Lab. El sistema incluirá tanto hardware como software, con módulos de comunicación (Wi-Fi, Bluetooth), sensores y cámaras para recopilar datos en tiempo real sobre los parámetros de calidad del envasado. Además, se desarrollará un modelo de aprendizaje automático (ML) para identificar y contar bolsas, así como detectar comportamientos inusuales o signos de falla en el proceso. El proyecto también incluirá la instalación del sistema, la capacitación del personal y la validación inicial y final del sistema. Finalmente, se generarán métricas y reportes automatizados para el ajuste de condiciones y alertas.
+        </p>
         <h3>Estructura de Desglose de Trabajo EDT</h3>
         <iframe src={edt} width="100%" height="600px"></iframe>
         <h3>Diccionario EDT</h3>
         <iframe src={diccionarioEdt} width="100%" height="600px"></iframe>
-
-        
       </div>
       
 		</main>
