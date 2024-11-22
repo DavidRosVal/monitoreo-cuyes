@@ -49,37 +49,41 @@ const diccionarioEdt = "/diccionario-EDT.pdf"
 		</style>
 	</head>
 	<body>
-		<Header />
+    <Header />
 		<main>
-      <h1>Definir las Actividades</h1>
+      <h1>Secuenciar las actividades</h1>
       <div class="seccion">
         <hr>
         <h2>Entradas</h2>
         <hr>
         <ol>
           <li>
-            <a href="/entregables/factores-ambientales">Factores ambientales de la Empresa</a>
+            <a href="/documentacion/activos-de-los-procesos">Activos de los Procesos de la Organización</a>
           </li>
           <li>
-            <a href="/entregables/activos-de-los-procesos">Activos de los Procesos de la Organización</a>
+            <a href="/documentacion/factores-ambientales">Factores Ambientales</a>
+          </li>
+          <li>
+            <a href="/documentacion/cronograma/definir-las-actividades">Atributos de las actividades</a>
+            <iframe src={"/atributos-de-las-actividades.pdf"} width="100%" height="600px"></iframe>
+
           </li>
         </ol>
         <hr>
         <h2>Herramientas</h2>
         <hr>
-        <h3>Descomposición</h3>
-        <h4>EDT</h4>
-        <iframe src={"/EDT.pdf"} width="100%" height="600px"></iframe>
+        <h3>Método de diagramación por precendencia</h3>
+        <p>En el MDP, las actividades se representan mediante nodos o cajas, y las relaciones de precedencia se muestran mediante flechas que conectan los nodos. Cada actividad se representa por su nombre o número y puede incluir información adicional, como la duración estimada de la actividad..</p>
+        <iframe src={"/ruta-critica-chiquita.pdf"} width="100%" height="600px"></iframe>
         
         <hr>
         <h2>Salidas</h2>
         <hr>
-        <h3>Lista de actividades</h3>
-        <iframe src={"/cuadro-de-actividades.pdf"} width="100%" height="600px"></iframe>
-        
-        <h3>Atributos de actividades</h3>
-        <iframe src={"/atributos-de-las-actividades.pdf"} width="100%" height="600px"></iframe>
-        
+        <h3>Diagrama de red el Cronograma del Proyecto</h3>
+        <p>Es una representación gráfica de las actividades del proyecto y las relaciones de precedencia entre ellas. Este tipo de diagrama se utiliza para planificar, programar y visualizar el flujo de trabajo del proyecto, incluyendo la secuencia de actividades, las dependencias y las interrelaciones entre ellas
+        </p>
+        <iframe src={"/metodo-ruta-critica.pdf"} width="100%" height="600px"></iframe>
+  
       </div>
       
 		</main>
