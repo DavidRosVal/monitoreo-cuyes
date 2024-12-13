@@ -1,0 +1,104 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
+
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<style>
+			main {
+				width: 960px;
+			}
+			.seccion {
+        margin-bottom: 3em;
+      }
+      h3, h2 {
+        text-align: center;
+        margin-bottom: 0.5em;
+        margin-top: 0.5em;
+      }
+      h3 {
+        margin-top: 1em;
+      }
+      h1 {
+        text-align: center;
+        margin-bottom: 1em;
+      }
+      .personal-container {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 2em;
+      }
+      .personal {
+        width: 500px;
+        text-align: center;
+        padding: 0 1em 0 1em;
+      }
+		</style>
+	</head>
+	<body>
+		<Header />
+		<main>
+      <h1>Entregables - Semana 4</h1>
+      <div class="seccion">
+        <hr>
+        <h2>Entradas</h2>
+        <hr>
+        <ol>
+          <li>
+            EDT
+            <iframe src={"/EDT.pdf"} width="100%" height="600px"></iframe>
+          </li>
+        </ol>
+        
+        
+        <hr>
+        <h2>Salidas</h2>
+        <hr>
+        <h3>1.3.1 Manual de la plataforma</h3>
+        
+        <iframe src={"/manual-de-plataforma.pdf"} width="100%" height="600px"></iframe>
+        
+        <h3>1.3.2. Documentación de Soporte</h3>
+        <iframe src={"/documentación-de-soporte.pdf"} width="100%" height="600px"></iframe>
+      
+        <h3>1.4.1. Instalación</h3>
+            <img width={1220} height={1518} src={"/medir-1.jpeg"} alt="" />
+            <img width={1220} height={1518} src={"/medir-2.jpeg"} alt="" />
+
+        <h3>1.4.2. Validación inicial </h3>
+        <video controls width="600">
+            <source src="/validación-inicial.mp4" type="video/mp4">
+            Tu navegador no soporta la reproducción de videos.
+        </video>
+        <iframe src={"/validación-inicial.pdf"} width="100%" height="600px"></iframe>
+
+        <h3>1.4.3. Métricas de rendimiento</h3>  
+        <iframe src={"/métricas-de-rendimiento.pdf"} width="100%" height="600px"></iframe>
+
+        <h3>1.4.4. Capacitación del Personal</h3>
+        <img width={800} height={700} src={"/capa-1.jpeg"} alt="" />
+        <img width={800} height={700} src={"/capa-2.jpeg"} alt="" />
+        <img width={800} height={700} src={"/capa-3.jpeg"} alt="" />
+
+        <h3>1.4.5. Validación final</h3>
+        <iframe src={"/validación-final.pdf"} width="100%" height="600px"></iframe>
+
+        <h3>1.5.1 Metricas de parámetros</h3>
+        <iframe src={"/métricas-y-parámetros-del-monitoreo-y-control.pdf"} width="100%" height="600px"></iframe>
+
+        <h3>1.5.2 Reportes y Alertas</h3>
+            <img width={310} height={220} src={"/reporte-1.jpeg"} alt="" />
+            <img width={310} height={220} src={"/reporte-2.jpeg"} alt="" />
+            <img width={310} height={220} src={"/reporte-3.jpeg"} alt="" />
+      </div>
+      
+		</main>
+		<Footer />
+	</body>
+</html>
